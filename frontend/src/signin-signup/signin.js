@@ -17,7 +17,7 @@ const SignIn = () => {
             setError("please fill All Fields");
             return;
         }
-        fetch("https://sdaasfsf.onrender.com/api/signup", {
+        fetch("http://localhost:8080/api/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const SignIn = () => {
                 } 
                 else {
                     setError("");
-                    navigate("/login");
+                    navigate("/");
                 }
             })
             .catch((e) => {
@@ -53,13 +53,13 @@ const SignIn = () => {
                     <section className="a" >
 
                         <lable>Email address</lable>
-                        <input placeholder="Enter email" onChange={(e) => setData({ ...data, email: e.target.value })}></input>
+                        <input placeholder="Enter email" className="signInput" onChange={(e) => setData({ ...data, email: e.target.value })}></input>
                     </section>
                     <section className="a" >
                         <lable >Password</lable>
-                        <input placeholder="Enter passsword" onChange={(e) => setData({ ...data, password: e.target.value })}></input>
+                        <input placeholder="Enter passsword" className="signInput" onChange={(e) => setData({ ...data, password: e.target.value })}></input>
                         <lable >Confirm Password</lable>
-                        <input placeholder="Enter passsword" onChange={(e) => setData({ ...data, confirmPassword: e.target.value })}></input>
+                        <input placeholder="Enter passsword" className="signInput" onChange={(e) => setData({ ...data, confirmPassword: e.target.value })}></input>
                     </section>
                     <section className="a" >
                         <section className="aa">

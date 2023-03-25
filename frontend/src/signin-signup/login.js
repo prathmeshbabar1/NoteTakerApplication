@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./login.css"
+
 const Login = () => {
    
 
@@ -17,7 +18,7 @@ const Login = () => {
             setError("please fill All Fields");
             return;
         }
-        fetch("https://sdaasfsf.onrender.com/api/login", {
+        fetch("http://localhost:8080/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -28,18 +29,15 @@ const Login = () => {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
-            
+                console.log(data.token);
+                const token = data.token
+            localStorage.setItem('token',token)
                 if (data.error === "user not found" || data.error === "password not match") {
                     setError(data.error);
                 } 
                 else {
                     setError("");
-                    const token = data.message.token;
-                    // console.log(data.message.userdetails)
-                    console.log(data.message.token)
-                    JSON.stringify(localStorage.setItem("token", token));
-                    // JSON.stringify(localStorage.setItem("user", JSON.stringify(data.message.userdetails)));
+  
 
                     navigate("/home");
                 }
@@ -59,11 +57,11 @@ const Login = () => {
                     <section className="a" >
 
                         <lable>Email address</lable>
-                        <input placeholder="Enter email" onChange={(e) => setData({ ...data, email: e.target.value })}></input>
+                        <input placeholder="Enter email"  className="loginInput" onChange={(e) => setData({ ...data, email: e.target.value })}></input>
                     </section>
                     <section className="a" >
                         <lable >Password</lable>
-                        <input placeholder="Enter passsword" onChange={(e) => setData({ ...data, password: e.target.value })}></input>
+                        <input placeholder="Enter passsword"  className="loginInput" onChange={(e) => setData({ ...data, password: e.target.value })}></input>
                     </section>
                     <section className="a" >
                         <section className="aa">

@@ -12,14 +12,16 @@ align-items: center;
     height: 40px;
 
 }
-input{
+.input{
     position: relative;
     top: 30px;
     /* margin-left: 160px; */
-    left: 120px;
+    height: 5vh;
+    left: 10vw;
     border: 1px solid gray;
     border-radius: 40px;
-    width: 70vw;
+    width: 60vw;
+    padding: 2px;
 }
 .maindata{
     display: flex;

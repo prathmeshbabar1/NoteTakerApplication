@@ -34,11 +34,7 @@
     text-align: center;
 }
 
-input{
-    display: block;
-    height: 25px;
-    width: 23vw;
-}
+
 .a{
     display: flex;
     flex-direction: column;
@@ -53,4 +49,9 @@ display: inline-flex;
 }
 .check{
     width: 3vw;
+}
+.loginInput{
+    display: block;
+    height: 25px;
+    width: 23vw;
 }
