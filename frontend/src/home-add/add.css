@@ -1,0 +1,29 @@
+.mainsection{
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 50px;}
+input{
+/* height: 100px; */
+margin: 0px;
+}
+button{
+height: 40px;
+
+}
+.name{
+font-size: x-large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 600;
+margin: 0px;
+}
+.flexx{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.textarea{
+height: 100px;
+
+}
