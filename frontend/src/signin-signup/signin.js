@@ -17,7 +17,7 @@ const SignIn = () => {
             setError("please fill All Fields");
             return;
         }
-        fetch("http://localhost:8080/api/signup", {
+        fetch("https://sdaasfsf.onrender.com/api/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
