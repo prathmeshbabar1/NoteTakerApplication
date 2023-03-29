@@ -5,11 +5,11 @@ const Note = require('../model/notesSchema');
 const home = express.Router();
 
 home.get('/note',async(req,res)=>{
-    console.log(note)
+    
     // console.log(req.body);
 try{
 const note = await Note.find({});
-
+console.log(note)
     res.status(200).send(note)
 }catch(e){
     res.status(400).send({"error" : "error while adding data"})
