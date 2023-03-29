@@ -7,7 +7,7 @@ const [ note,setNote] = useState([]);
 // const [key,setKey] = useState('');
 async function noteFetcher(){
   
-    await fetch("http://localhost:8080/api/note").then((res)=>res.json())
+    await fetch("https://sdaasfsf.onrender.com/api/note").then((res)=>res.json())
     .then((data)=>setNote(data))
 }
 
@@ -18,7 +18,7 @@ async function noteChanger(e){
   let key = e.target.value
     console.log(key);
     if(key){
-     let result =   await fetch(`http://localhost:8080/api/notee/${key}`)
+     let result =   await fetch(`https://sdaasfsf.onrender.com/api/notee/${key}`)
      result = await result.json()
      setNote(result)
      console.log(result);
