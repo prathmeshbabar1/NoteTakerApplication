@@ -10,7 +10,7 @@ const homeRoute = require('./routes/home');
 const url = "mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/?retryWrites=true&w=majority";
 const port = "8080"
 async function conn(){
-    await mongoose.connect(url)
+    await mongoose.connect(url,{ useNewUrlParser: true } )
 console.log("connected to DB");
 } 
 conn();
