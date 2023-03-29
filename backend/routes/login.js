@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const User = require('../model/userSchema');
-const jwt = require("jsonwebtoken")
+// const jwt = require("jsonwebtoken")
 
 const loginRouter = express.Router();
 const secret = "prathmesh"
@@ -16,11 +16,11 @@ if(!user){
 // console.log(user.password);
 else if(user.password == password){
 
-    const token = jwt.sign({
-        exp: Math.floor(Date.now() / 1000) + (60 * 60 * 60 * 60),
-        user:user.__id
-      },secret)
-    res.status(200).send({'token':token})
+//     const token = jwt.sign({
+//         exp: Math.floor(Date.now() / 1000) + (60 * 60 * 60 * 60),
+//         user:user.__id
+//       },secret)
+    res.status(200).send({'token':"token"})
 }else{
     res.status(200).json({"error":"password not match"})
 }
