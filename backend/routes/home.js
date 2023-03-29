@@ -5,7 +5,7 @@ const Note = require('../model/notesSchema');
 const home = express.Router();
 
 home.get('/note',async(req,res)=>{
-    
+    console.log(note)
     // console.log(req.body);
 try{
 const note = await Note.find({});
