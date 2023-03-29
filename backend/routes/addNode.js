@@ -12,7 +12,7 @@ const note = await Note.create({title:title,description:description});
 
     res.status(200).send(note)
 }catch(e){
-    res.status(400).send("error while adding data")
+    res.status(400).send({"error" : "error while data save"})
 }
 }  
 )
